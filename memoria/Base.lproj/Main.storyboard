@@ -70,6 +70,7 @@
                     </view>
                     <connections>
                         <outlet property="Start_button" destination="JWB-yz-ZPz" id="sh8-NA-Awh"/>
+                        <outlet property="contador" destination="I8v-rg-3Yl" id="G1Z-gM-2c1"/>
                         <outlet property="img_to_show" destination="kqm-Mf-WjA" id="5A6-WU-g2U"/>
                     </connections>
                 </viewController>
