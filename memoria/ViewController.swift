@@ -1,9 +1,6 @@
 
 import UIKit
 
-
-
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var img_to_show: UIImageView!
@@ -16,23 +13,26 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
     super.viewDidLoad()
     shufled_array = img_array.shuffled()
-        contador.text = (" imagen 0 de  9 ")
+        contador.text = ("  0 de  9 ")
         
     }
     
     @IBAction func Start(_ sender: Any) {
         
     var i : Int = 0
-    var i_text : String
-        
+    var i_text : String = "0"
+    let total_text : String =  " de  9 "
+    
     Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
-        if i <= 8{
+    if i <= 8{
+    i_text = String(i+1)
     self.img_to_show.image = self.shufled_array[i]
-     i_text = String(i)
-            
-    contador.text = ((i)(" /  9 "))
+    self.contador.text = (i_text + total_text)
         i+=1
             
+    }else{
+        self.performSegue(withIdentifier: "test", sender: nil)
+        
         }
         })
        
