@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         
     var i : Int = 0
     var i_text : String = "0"
-    let total_text : String =  " de  9 "
+    let total_text : String =  " de 9 "
     
     Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
     if i <= 8{
@@ -37,9 +37,6 @@ class ViewController: UIViewController {
         
         }
         })
-       
-        
-        
     }
     
 
