@@ -30,7 +30,6 @@ class Colection: UIViewController,UICollectionViewDataSource, UICollectionViewDe
         
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return img_array.count
@@ -52,7 +51,8 @@ class Colection: UIViewController,UICollectionViewDataSource, UICollectionViewDe
         
         array_seleccion.append(celda.img_to_show.image!)
         
-        if contador < 9 {
+        if contador < 9
+        {
             if shufled_array[contador] == array_seleccion[contador] {
                 
                 aciertos += 1
