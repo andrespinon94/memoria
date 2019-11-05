@@ -156,7 +156,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="43" id="bVu-ii-hhE"/>
                                         </constraints>
-                                        <state key="normal" title="Volver"/>
+                                        <state key="normal" title="Volver a jugar"/>
+                                        <connections>
+                                            <action selector="volver_pantalla1:" destination="pt2-wu-ixz" eventType="touchUpInside" id="F2Z-pe-Mdw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -165,6 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="CHY-zV-4RL"/>
                     </view>
                     <connections>
+                        <outlet property="boton_volver" destination="gkc-LT-EP1" id="6l7-Ja-3gc"/>
                         <outlet property="collection_view" destination="5Zp-Vo-n3t" id="e22-rO-cBG"/>
                         <outlet property="instrucciones" destination="UQP-aS-4Md" id="m27-9O-zfi"/>
                         <outlet property="numero_aciertos" destination="eNH-WZ-iVI" id="zc4-7d-CaE"/>

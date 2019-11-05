@@ -3,7 +3,7 @@ import UIKit
 
 var img_array : [UIImage] = [#imageLiteral(resourceName: "FL4K"),#imageLiteral(resourceName: "moze"),#imageLiteral(resourceName: "Zane"),#imageLiteral(resourceName: "amara"),#imageLiteral(resourceName: "zero"),#imageLiteral(resourceName: "Gaige"),#imageLiteral(resourceName: "salvador"),#imageLiteral(resourceName: "Maya"),#imageLiteral(resourceName: "Axton")]
 var shufled_array : [UIImage] = []
-
+var i : Int = 0
 class ViewController: UIViewController {
 
     @IBOutlet weak var img_to_show: UIImageView!
@@ -15,12 +15,14 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     shufled_array = img_array.shuffled()
         contador.text = ("  0 de  9 ")
-        
+        i = 0
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        i = 0 
     }
     
     @IBAction func Start(_ sender: Any) {
         
-    var i : Int = 0
     var i_text : String = "0"
     let total_text : String =  " de 9 "
     
