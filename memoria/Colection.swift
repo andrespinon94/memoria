@@ -64,11 +64,11 @@ class Colection: UIViewController,UICollectionViewDataSource, UICollectionViewDe
         
         contador += 1
         
-        var contador_numero_text = String(contador + 1)
+        let contador_numero_text = String(contador + 1)
             
         instrucciones.self.text = contador_text + contador_numero_text
             
-        var aciertos_numero_a_texto = String(aciertos)
+        let aciertos_numero_a_texto = String(aciertos)
             
         numero_aciertos.self.text = aciertos_numero_a_texto + aciertos_text
         } else
