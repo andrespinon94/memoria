@@ -11,7 +11,7 @@ class Colection: UIViewController,UICollectionViewDataSource, UICollectionViewDe
     @IBOutlet weak var collection_view: UICollectionView!
     @IBOutlet weak var boton_volver: UIButton!
     
-    var contador_text : String = "elige la imagen numero "
+    var contador_text : String = "elige la imagen numero"
     var aciertos_text : String = " /9 Aciertos"
     var aciertos : Int = 0
     var contador : Int = 0
@@ -74,7 +74,29 @@ class Colection: UIViewController,UICollectionViewDataSource, UICollectionViewDe
         } else
         {
             instrucciones.self.text = ("el juego ha terminado")
+            result(aciertos: aciertos)
+        
         }
+    }
+    
+    func result(aciertos : Int){
+        if aciertos<=3
+        {
+            use_feedback.text = ("mala memoria")
+            use_feedback.textColor  = UIColor.red
+        }
+        if aciertos>3 && aciertos<8
+        {
+            use_feedback.text = ("memoria normal")
+            use_feedback.textColor = UIColor.yellow
+        }
+        if aciertos>7
+        {
+            use_feedback.text = ("buena memoria!!!")
+            use_feedback.textColor  = UIColor.green
+        }
+        
+        
     }
     
 }
